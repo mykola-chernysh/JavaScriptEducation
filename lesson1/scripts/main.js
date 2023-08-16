@@ -56,7 +56,7 @@ console.log(typeof c);
 
 let userName = prompt("Введіть своє ім'я:");
 let userLastName = prompt("Введіть своє прізвище:");
-let userAge = prompt("Введіть ваш вік:");
+let userAge = +prompt("Введіть ваш вік:");
 
 let userInfo = `Name: ${userName}, Surname: ${userLastName}, age: ${userAge}`;
 
