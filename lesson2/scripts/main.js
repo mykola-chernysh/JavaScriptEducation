@@ -1,6 +1,6 @@
 'use strict';
 
-// ------------------------------------
+// Створити масив, наповнити його 10 елементами будь-якого типу, вивести кожен елемент в консоль
 
 let trashArr = [
     'apple',
@@ -15,9 +15,18 @@ let trashArr = [
     false
 ];
 
+console.log(trashArr[0]);
+console.log(trashArr[1]);
+console.log(trashArr[2]);
 console.log(trashArr[3]);
+console.log(trashArr[4]);
+console.log(trashArr[5]);
+console.log(trashArr[6]);
+console.log(trashArr[7]);
+console.log(trashArr[8]);
+console.log(trashArr[9]);
 
-// ------------------------------------
+// Створити 3 об'єкти які описують книги. Поля об'єкту : title ,pageCount, genre.
 
 let bookDescFirst = {
     title: "The Lords of the rings",
@@ -37,15 +46,15 @@ let bookDescThird = {
     genre: 'Fantasy'
 }
 
-// ------------------------------------
+// Створити 3 об'єкти які описують книги. Поля об'єкту : title ,pageCount, genre, authors. Поле "автори" - являється  масивом. Кожен автор має поля name та age.
 
 let newBookDescFirst = {
     title: "The Lords of the rings",
     pageCount: 1201,
     genre: 'Fantasy',
     authors: [
-        'J.R.R. Tolkien',
-        81
+        {name: 'J.R.R.', age: 60},
+        {name: 'Tolkien', age: 21}
     ]
 };
 
@@ -54,8 +63,8 @@ let newBookDescSecond = {
     pageCount: 400,
     genre: 'Fantasy',
     authors: [
-        'J.R.R. Tolkien',
-        81
+        {name: 'J.R.R.', age: 21},
+        {name: 'Tolkien', age: 61}
     ]
 };
 
@@ -64,12 +73,13 @@ let newBookDescThird = {
     pageCount: 5232,
     genre: 'Fantasy',
     authors: [
-        'George R.R. Martin',
-        74
+        {name: 'George', age: 20},
+        {name: 'R.R.', age: 30},
+        {name: 'Martin', age: 24}
     ]
 };
 
-// ------------------------------------
+// Створити масив з 10 об'єктами які описують сутніть "користувач". Поля: name, username,password. Вивести в консоль пароль кожного користувача
 
 let users = [
     {name: 'Aragorn', username: 'strider', password: 999777555},
@@ -84,9 +94,19 @@ let users = [
     {name: 'Sauron',username: 'LordOfTheRings',password: 666},
 ];
 
+console.log(users[0].password);
+console.log(users[1].password);
+console.log(users[2].password);
+console.log(users[3].password);
+console.log(users[4].password);
+console.log(users[5].password);
 console.log(users[6].password);
+console.log(users[7].password);
+console.log(users[8].password);
+console.log(users[9].password);
 
-// ------------------------------------
+// Є змінна х, якій ви надаєте довільне числове значення.
+// Якщо змінна x не дорівнює нулю, виведіть 'Вірно', інакше виведіть 'Невірно'. Перевірте  скрипт при a, що дорівнює 1, 0, -3
 
 let x = -3;
 
@@ -96,7 +116,7 @@ if (x !== 0) {
     console.log('Не вірно!');
 }
 
-// ------------------------------------
+// Дано змінну time яка рівна числу від 0 до 59. Потрібно написати код, який перевірить, до якої четверті години попадає число (в першу, другу, третю или четверту частину години).
 
 let time = 390;
 
@@ -112,7 +132,7 @@ if (time >= 0 && time <= 14) {
     console.log('An hour has only 60 minutes!');
 }
 
-// ------------------------------------
+// У змінній day дано якесь число від 1 до 31. Потрібно визначити, у яку половину(декаду) місяця потрапляє це число (у першу, другу чи третю).
 
 let day = 32;
 let decade= (day >= 1 && day <= 11) ? 'First decade'
@@ -122,7 +142,7 @@ let decade= (day >= 1 && day <= 11) ? 'First decade'
 
 console.log(decade);
 
-// ------------------------------------
+// Скласти розклад на тиждень за домопоги switch. Користувач вводить порядковий номер дня тижня і на екрані відображається інфа що заплановано на цей день (можна замість плану на день, назву дня англійською).
 
 let dayNumber = +prompt('Enter the day number:', '1');
 
@@ -159,7 +179,9 @@ switch (dayNumber) {
         console.log('Enter the correct day!');
 }
 
-// ------------------------------------
+// Користувач вводить або має два числа.
+// Потрібно знайти та вивести максимальне число з тих двох .
+// Також потрібно врахувати коли введені рівні числа.
 
 let numberOne = 2;
 let numberTwo = 2;
@@ -170,7 +192,7 @@ let result = numberOne > numberTwo ? numberOne
 
 console.log(result);
 
-// ------------------------------------
+// є змінна х, яка може прийняти будь-яке значення (стрінг, число, undefined, null  і тд включно). Напишіть код який, за допомоги  оператора || буде присвоювати змінній х значення "default"  якщо значення змінної х являється falsy (хибноподібні, тобто приводиться до false)
 
 // let q = Math.sqrt(-1); //перевірка NaN
 let q = 555;
@@ -187,7 +209,7 @@ if (typeof q === 'undefined'
     console.log(q);
 }
 
-// ------------------------------------
+// з файлу arrays.js (лежить в папці 2023 plan ) взяти масив coursesAndDurationArray. За допомоги іф перевірити кожен його елемент на тривалість навчання. У випадку якщо тривалість довша за 5 місяців вивести в консоль "Супер".
 
 let coursesAndDurationArray = [
     {title: 'JavaScript Complex', monthDuration: 5},
