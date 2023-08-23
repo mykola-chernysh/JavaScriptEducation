@@ -392,9 +392,9 @@ for (let i = 0; i < booksArr.length; i++) {
     if (book["pageCount"] > maxPage) {
         maxPage = booksArr[i]["pageCount"];
         nameMaxPageBook = [];
-        nameMaxPageBook.push(book["name"]);
+        nameMaxPageBook[nameMaxPageBook.length] = book["name"];
     } else if (book["pageCount"] === maxPage) {
-        nameMaxPageBook.push(book["name"]);
+        nameMaxPageBook[nameMaxPageBook.length] = book["name"];
     }
 }
 
@@ -412,10 +412,10 @@ for (let i = 0; i < booksArr.length; i++) {
     if (booksArr[i]["genre"].length > maxGenre) {
         maxGenre = booksArr[i]["genre"].length;
         nameMaxGenreBook = [];
-        nameMaxGenreBook.push(booksArr[i]["name"]);
+        nameMaxGenreBook[nameMaxGenreBook.length] = booksArr[i]["name"];
 
     } else if (booksArr[i]["genre"].length === maxGenre) {
-        nameMaxGenreBook.push(booksArr[i]["name"]);
+        nameMaxGenreBook[nameMaxGenreBook.length] = booksArr[i]["name"];
     }
 
 }
@@ -434,9 +434,9 @@ for (let i = 0; i < booksArr.length; i++) {
     if (book["name"].length > longestName) {
         longestName = book["name"].length;
         longestNameBook = [];
-        longestNameBook.push(book["name"]);
+        longestNameBook[longestNameBook.length] = book["name"];
     } else if (book["name"].length === longestName) {
-        longestNameBook.push(book["name"]);
+        longestNameBook[longestNameBook.length] = book["name"];
     }
 }
 
@@ -450,7 +450,7 @@ let authorsBook = [];
 
 for (const book of booksArr) {
     if (book["authors"].length === 2) {
-        authorsBook.push(book["name"]);
+        authorsBook[authorsBook.length] = book["name"];
     }
 }
 
@@ -464,7 +464,7 @@ let authorBook = [];
 
 for (const book of booksArr) {
     if (book["authors"].length === 1) {
-        authorBook.push(book["name"]);
+        authorBook[authorBook.length] = book["name"];
     }
 }
 
