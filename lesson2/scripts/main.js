@@ -79,6 +79,8 @@ let newBookDescThird = {
     ]
 };
 
+console.log(newBookDescFirst);
+
 // Створити масив з 10 об'єктами які описують сутніть "користувач". Поля: name, username,password. Вивести в консоль пароль кожного користувача
 
 let users = [
