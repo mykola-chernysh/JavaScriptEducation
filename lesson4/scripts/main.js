@@ -199,19 +199,14 @@ console.log(swapFun);
 // Приклад exchange(10000,[{currency:'USD',value:40},{currency:'EUR',value:42}],'USD') // => 250
 
 function exchange(sumUAH,currencyValues,exchangeCurrency) {
-    let result = 0;
 
     for (const elemCurr of currencyValues) {
-        if (exchangeCurrency === 'USD' && elemCurr['currency']  === 'USD') {
-            result = sumUAH / elemCurr['value'];
-        } else if (exchangeCurrency === 'EUR' && elemCurr['currency']  === 'EUR') {
-            result = sumUAH / elemCurr['value'];
-        } else {
-            result = 'Enter the correct value!';
+        if (exchangeCurrency === elemCurr['currency']) {
+            return  (sumUAH / elemCurr['value']).toFixed(2);
         }
     }
 
-    return result;
+    return 'Enter the correct value!';
 }
 
 const exchangeResult = exchange(10000,[{currency:'USD',value:40},{currency:'EUR',value:42}],'EUR');
