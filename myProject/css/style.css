@@ -1,0 +1,323 @@
+*, *::before, *::after {
+    padding: 0;
+    margin: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+/*---- styles for the index.html ------*/
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    background-color: #aab5bf;
+}
+
+body h1 {
+    position: fixed;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+    padding: 15px 15px;
+
+    font-size: 40px;
+    text-align: center;
+    text-transform: uppercase;
+    color: #593D3B;
+    background: linear-gradient(#70818c, #aab5bf);
+
+    text-shadow: -1px -1px 0 #f5f5f5,
+        0 -1px 0 #fff,
+        1px -1px 0 #f5f5f5,
+        -1px 0 0 #fff,
+        1px 0 0 #f5f5f5,
+        -1px 1px 0 #f5f5f5,
+        0 1px 0 #f5f5f5,
+        1px 1px 0 #f5f5f5;
+}
+
+body h1:after {
+    content: '';
+    position: absolute;
+    width: 45%;
+    height: 2px;
+    bottom: 15px;
+    background-color: #593D3B;
+}
+
+#users-container {
+    width: 100%;
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(160px, 700px));
+    justify-content: center;
+    place-items: center;
+    gap: 30px;
+    padding: 110px 30px 30px;
+
+    color: #593d3b;
+}
+
+.user-block {
+    width: 100%;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 0 10px;
+
+    border: 1px solid #fff;
+    box-shadow: #ffffff 0 5px 15px;
+
+    border-radius: 20px;
+    background-color: #c5d0d9;
+}
+
+.user-info-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.user-info-wrapper p {
+    font-size: 20px;
+    font-weight: 700;
+
+    text-shadow: -1px -1px 0 #f5f5f5,
+        0 -1px 0 #fff,
+        1px -1px 0 #f5f5f5,
+        -1px 0 0 #fff,
+        1px 0 0 #f5f5f5,
+        -1px 1px 0 #f5f5f5,
+        0 1px 0 #f5f5f5,
+        1px 1px 0 #f5f5f5;
+}
+
+.user-button {
+    min-width: 50%;
+    padding: 15px;
+
+    text-decoration: none;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+    text-align: center;
+    color: #ffffff;
+    border-radius: 15px;
+    box-shadow: #ffffff 0 5px 15px;
+    background-color: #593d3b;
+    cursor: pointer;
+
+    transition: 0.2s ease;
+}
+
+.user-button:hover {
+    background-color: #261514;
+    transform: scale(1.05);
+    transition: 0.2s ease;
+}
+
+/*--- styles for the user-details.html (SHOW INFO ABOUT USER) ---*/
+
+#users-details-body {
+    width: 100%;
+}
+
+#user-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 120px 15px 0;
+}
+
+.user-info {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+
+    font-size: 18px;
+}
+
+.user-info-block-all {
+    min-width: 300px;
+    flex: 0 1 20%;
+    height: auto;
+    justify-content: center;
+    align-items: start;
+    gap: 20px;
+    padding: 20px;
+
+    color: #593D3B;
+
+    transition: 0.2s ease;
+}
+
+.user-info-block-all:hover {
+    transform: scale(1.05) translateY(-20px);
+    transition: 0.2s ease;
+}
+
+.user-info-block-all p:not(:first-child) {
+    padding-left: 15px;
+}
+
+.user-info-block p:first-child,
+.user-contacts p:first-child {
+    font-weight: 700;
+    color: #261514;
+
+    text-shadow: -1px -1px 0 #f5f5f5,
+        0 -1px 0 #fff,
+        1px -1px 0 #f5f5f5,
+        -1px 0 0 #fff,
+        1px 0 0 #f5f5f5,
+        -1px 1px 0 #f5f5f5,
+        0 1px 0 #f5f5f5,
+        1px 1px 0 #f5f5f5;
+}
+
+.user-address {
+    gap: 10px;
+}
+
+.user-geo {
+    min-width: 250px;
+    gap: 10px;
+}
+
+.key-name {
+    text-transform: capitalize;
+    color: #261514;
+
+    text-shadow: -1px -1px 0 #f5f5f5,
+        0 -1px 0 #fff,
+        1px -1px 0 #f5f5f5,
+        -1px 0 0 #fff,
+        1px 0 0 #f5f5f5,
+        -1px 1px 0 #f5f5f5,
+        0 1px 0 #f5f5f5,
+        1px 1px 0 #f5f5f5;
+}
+
+.user-posts {
+    width: 90%;
+    margin: 30px 0 20px 0;
+
+    font-size: 20px;
+}
+
+/*--- styles for the user-details.html (SHOW USER POST TITLE) ---*/
+.posts-title-blocks {
+    display: grid;
+    grid-template-columns: repeat(5, 250px);
+    gap: 10px;
+
+    margin: 10px 0 40px 0;
+
+    animation: showBlock 0.5s linear;
+}
+
+.posts-display {
+    display: none;
+}
+
+@keyframes showBlock {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.post-title-block {
+    justify-content: space-between;
+    padding: 30px 10px;
+
+    transition: 0.2s ease;
+}
+
+.post-title-block h4 {
+    text-align: center;
+
+    text-shadow: -1px -1px 0 #f5f5f5,
+        0 -1px 0 #fff,
+        1px -1px 0 #f5f5f5,
+        -1px 0 0 #fff,
+        1px 0 0 #f5f5f5,
+        -1px 1px 0 #f5f5f5,
+        0 1px 0 #f5f5f5,
+        1px 1px 0 #f5f5f5;
+}
+
+.post-title-block h4:first-letter {
+    text-transform: uppercase;
+    text-align: center;
+}
+
+/*---- styles for the post-details.html ------*/
+
+#post-body {
+    display: flex;
+    justify-content: center;
+}
+
+#post-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    padding: 120px 30px 30px;
+}
+
+.post-info-block {
+    width: 50%;
+    align-items: start;
+    padding: 10px 30px;
+}
+
+.post-info-block p:first-letter {
+    text-transform: uppercase;
+}
+
+.post-info-block p {
+    font-size: 18px;
+    color: #593D3B;
+}
+
+.comments-block {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.comment-post-block {
+    flex: 0 0 23%;
+    height: auto;
+    justify-content: space-between;
+    align-items: start;
+    gap: 10px;
+
+    padding: 30px;
+
+    transition: 0.2s ease;
+}
+
+.comment-post-block p {
+    font-size: 18px;
+    color: #593D3B;;
+}
+
+.comment-post-block:hover {
+    transform: scale(1.05) translateY(-20px);
+    transition: 0.2s ease;
+}

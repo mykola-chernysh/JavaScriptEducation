@@ -1,0 +1,98 @@
+@media screen and (max-width: 1350px) {
+    .posts-title-blocks {
+        grid-template-columns: repeat(5, 200px);
+
+        font-size: 16px;
+    }
+
+    .post-info {
+        min-width: 25%;
+        font-size: 16px;
+    }
+
+    .comment-post-block {
+        flex: 0 0 30%;
+    }
+}
+
+@media screen and (max-width: 1060px) {
+    .posts-title-blocks {
+        grid-template-columns: repeat(4, 200px);
+    }
+
+    .post-info-block {
+        width: 100%;
+    }
+
+    .comment-post-block {
+        flex: 0 0 45%;
+    }
+}
+
+@media screen and (max-width: 860px) {
+    .posts-title-blocks {
+        grid-template-columns: repeat(3, 190px);
+    }
+
+    .post-info-block p {
+        font-size: 16px;
+    }
+
+    .comment-post-block p {
+        font-size: 16px;
+    }
+
+    .post-info-block {
+        height: auto;
+        gap: 10px;
+    }
+}
+
+@media screen and (max-width: 620px) {
+    #users-container {
+        grid-template-columns: repeat(auto-fill, 100%);
+    }
+
+    .user-info-wrapper p {
+        font-size: 17px;
+    }
+
+    .user-button {
+        font-size: 15px;
+    }
+
+    .post-info {
+        min-width: 25%;
+        font-size: 14px;
+    }
+
+    .posts-title-blocks {
+        grid-template-columns: auto;
+    }
+
+    .comment-post-block {
+        flex: 0 0 100%;
+        padding: 15px;
+    }
+
+    .post-info-block {
+        padding: 15px;
+    }
+}
+@media screen and (max-width: 440px) {
+    body h1 {
+        font-size: 30px;
+    }
+
+    #user-container {
+        padding-top: 140px;
+    }
+
+    .user-info-block-all {
+        min-width: 270px;
+    }
+
+    .user-geo {
+        min-width: 235px;
+    }
+}
